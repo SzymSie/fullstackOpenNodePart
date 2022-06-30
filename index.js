@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+app.use(express.json());
+
 let persons = [
   {
     id: 1,
@@ -55,6 +57,31 @@ app.get("/info", (request, response) => {
       persons.length
     } people</h1><h1>${new Date()}</h1>`
   );
+});
+
+app.post("/api/persons", (request, response) => {
+  const body = request.body;
+  // console.log(persons);
+  // response.json(persons);
+
+  console.log({ body });
+
+  if (!body.content) {
+    console.log("11111");
+    return response.status(400).json({
+      error: "content missing",
+    });
+  }
+  console.log("2222");
+
+  const person = {
+    content: body.content,
+    id: Math.random() * 1000000000,
+  };
+
+  persons = persons.concat(person);
+
+  response.json(person);
 });
 
 const PORT = 3001;
