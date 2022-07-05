@@ -32,6 +32,7 @@ app.get("/", (request, response) => {
 
 app.get("/api/persons", (request, response) => {
   response.json(persons);
+  console.log({ persons });
 });
 
 app.get("/api/persons/:id", (request, response) => {
@@ -68,10 +69,18 @@ app.post("/api/persons", (request, response) => {
     });
   }
 
+  // The name already exists in the phonebook
+  const prsn = persons.find((person) => person.name === body.name);
+  if (prsn) {
+    return response.status(409).json({
+      error: `${body.name} already exists in the phonebook`,
+    });
+  }
+
   const person = {
+    id: Math.random() * 1000000000,
     name: body.name,
     number: body.number,
-    id: Math.random() * 1000000000,
   };
 
   persons = persons.concat(person);
