@@ -61,21 +61,16 @@ app.get("/info", (request, response) => {
 
 app.post("/api/persons", (request, response) => {
   const body = request.body;
-  // console.log(persons);
-  // response.json(persons);
 
-  console.log({ body });
-
-  if (!body.content) {
-    console.log("11111");
+  if (!body.name || !body.number) {
     return response.status(400).json({
-      error: "content missing",
+      error: "name or number missing",
     });
   }
-  console.log("2222");
 
   const person = {
-    content: body.content,
+    name: body.name,
+    number: body.number,
     id: Math.random() * 1000000000,
   };
 
