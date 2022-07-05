@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-//const morgan = require("morgan");
+const morgan = require("morgan");
 
 const requestLogger = (request, response, next) => {
   console.log("Method:", request.method);
@@ -10,9 +10,15 @@ const requestLogger = (request, response, next) => {
   next();
 };
 
+morgan.token("body", function (req, res) {
+  return JSON.stringify(req.body);
+});
+
 app.use(express.json());
 app.use(requestLogger);
-//app.use(morgan("tiny"));
+app.use(morgan("tiny"));
+app.use(morgan(":body"));
+app.use(morgan(":req[Content-Length]"));
 
 let persons = [
   {
