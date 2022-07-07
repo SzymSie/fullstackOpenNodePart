@@ -12,13 +12,13 @@ content-type: application/json
     "number": "000123"
 }
 ###
-GET https://quiet-wave-96811.herokuapp.com/api/persons
+GET https://secure-garden-44781.herokuapp.com/api/persons
 
 ###
-DELETE https://quiet-wave-96811.herokuapp.com/api/persons/1
+DELETE https://secure-garden-44781.herokuapp.com/api/persons/1
 
 ###
-POST https://quiet-wave-96811.herokuapp.com/api/persons HTTP/1.1
+POST https://secure-garden-44781.herokuapp.com/api/persons HTTP/1.1
 content-type: application/json
 
 {
