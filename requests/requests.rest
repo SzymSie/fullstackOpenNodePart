@@ -8,6 +8,20 @@ POST http://localhost:3001/api/persons/ HTTP/1.1
 content-type: application/json
 
 {
-    "name": "hello there",
-    "number": "8888888"
+    "name": "blah blah",
+    "number": "000123"
+}
+###
+GET https://quiet-wave-96811.herokuapp.com/api/persons
+
+###
+DELETE https://quiet-wave-96811.herokuapp.com/api/persons/1
+
+###
+POST https://quiet-wave-96811.herokuapp.com/api/persons HTTP/1.1
+content-type: application/json
+
+{
+    "name": "blah blah",
+    "number": "999"
 }
