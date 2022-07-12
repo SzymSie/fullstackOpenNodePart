@@ -16,3 +16,6 @@ git push heroku main
 
 to deploy on heroku
 git push heroku HEAD:master
+
+commit and deploy
+"deploy:full"
