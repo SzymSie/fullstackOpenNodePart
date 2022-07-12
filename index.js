@@ -21,6 +21,7 @@ app.use(morgan("tiny"));
 app.use(morgan(":req[Content-Length]"));
 app.use(morgan(":body"));
 app.use(cors());
+app.use(express.static("build"));
 
 let persons = [
   {
