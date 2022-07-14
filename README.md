@@ -1,3 +1,7 @@
+//heroku config:set MONGODB_URI='mongodb+srv://fullstack:<password>@cluster0.wwb8w.mongodb.net/?retryWrites=true&w=majority'8w.mongodb.net/?retryWrites=true&w=majority'
+
+//heroku config: set port=3001
+
 project from here
 https://secure-garden-44781.herokuapp.com/
 
