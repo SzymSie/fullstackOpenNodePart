@@ -8,8 +8,8 @@ POST http://localhost:3001/api/persons/ HTTP/1.1
 content-type: application/json
 
 {
-    "name": "blah blah",
-    "number": "000123"
+    "name": "new person123",
+    "number": "123123"
 }
 ###
 GET https://secure-garden-44781.herokuapp.com/api/persons
@@ -22,6 +22,6 @@ POST https://secure-garden-44781.herokuapp.com/api/persons HTTP/1.1
 content-type: application/json
 
 {
-    "name": "blah blah",
-    "number": "999"
+    "name": "new person123",
+    "number": "123123"
 }
