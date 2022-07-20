@@ -22,4 +22,4 @@ to deploy on heroku
 git push heroku HEAD:master
 
 commit and deploy
-"deploy:full"
+"npm run deploy:full"
