@@ -16,7 +16,7 @@ const url = `mongodb+srv://fullstack:${password}@cluster0.wwb8w.mongodb.net/?ret
 const personSchema = new mongoose.Schema({
   name: {
     type: String,
-    minLegth: 5,
+    minLegth: 3,
     required: true
   },
   number: {
