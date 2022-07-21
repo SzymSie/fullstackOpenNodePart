@@ -120,9 +120,12 @@ app.put("/api/persons/:id", (request, response, next) => {
 
   Person.findByIdAndUpdate(request.params.id, person, { new: true, runValidators: true, context: 'query' })
     .then((updatedPerson) => {
+      console.log("updateddddd")
       response.json(updatedPerson);
     })
-    .catch((error) => next(error));
+    .catch((error) => {
+      console.log("nottttttt updateddddd")
+      next(error)});
 });
 
 const unknownEndpoint = (request, response) => {

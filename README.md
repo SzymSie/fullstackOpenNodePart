@@ -21,5 +21,8 @@ git push heroku main
 to deploy on heroku
 git push heroku HEAD:master
 
-commit and deploy
-"npm run deploy:full"
+commit and deploy (build front, copy to backend, commit and deploy to heroku)
+npm run deploy:full
+
+updates the frontend for the backend (build frontend and copy it to backend)
+npm run build:ui
