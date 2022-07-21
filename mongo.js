@@ -14,15 +14,8 @@ const number = process.argv[4];
 const url = `mongodb+srv://fullstack:${password}@cluster0.wwb8w.mongodb.net/?retryWrites=true&w=majority`;
 
 const personSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    minLegth: 3,
-    required: true
-  },
-  number: {
-    type: String,
-    required: true
-  },
+  name: String,
+  number: String,
 });
 
 const Person = mongoose.model("Person", personSchema);
