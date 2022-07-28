@@ -1,3 +1,4 @@
+/* old stuff, moved elsewhere, to person.js and stuff
 const mongoose = require("mongoose");
 
 if (process.argv.length < 3) {
@@ -15,7 +16,7 @@ const url = `mongodb+srv://fullstack:${password}@cluster0.wwb8w.mongodb.net/?ret
 
 const personSchema = new mongoose.Schema({
   name: String,
-  number: String,
+  number: String
 });
 
 const Person = mongoose.model("Person", personSchema);
@@ -44,3 +45,4 @@ mongoose
     }
   })
   .catch((err) => console.log(err));
+ */
